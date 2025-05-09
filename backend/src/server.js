@@ -3,6 +3,7 @@ import "dotenv/config";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
+import morgan from "morgan";
 
 import authRoutes from "./routes/auth.route.js";
 import userRoutes from "./routes/user.route.js";
@@ -19,6 +20,7 @@ app.use(cors());
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(morgan("dev"));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
