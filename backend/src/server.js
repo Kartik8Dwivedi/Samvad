@@ -18,14 +18,14 @@ const __dirname = path.resolve();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://samvad-sigma.vercel.app/",
+  "https://samvad-sigma.vercel.app",
 ];
 
 app.use(
   cors({
     origin: allowedOrigins,
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
 
