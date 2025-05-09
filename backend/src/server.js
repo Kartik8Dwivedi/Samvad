@@ -28,7 +28,6 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
-app.use(express.urlencoded({ extended: true }));
 
 
 app.use(express.json());
